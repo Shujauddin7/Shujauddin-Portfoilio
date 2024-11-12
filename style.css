@@ -9,7 +9,8 @@
 body {
   font-family: Arial, sans-serif;
   background: aqua;
-  color: goldenrod;
+  color: gold
+;
 }
 
 /* Navigation Bar */
@@ -150,7 +151,7 @@ p {
 /* About Section Styling */
 #about {
   padding: 40px;
-  background-color: goldenrod;
+  background-color: black;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
@@ -158,14 +159,14 @@ p {
 
 #about h2 {
   font-size: 2rem;
-  color: #333;
+  color: gold;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .intro, .conclusion {
   font-size: 1.1rem;
-  color: #555;
+  color: gold;
   line-height: 1.6;
   text-align: center;
 }
@@ -179,7 +180,7 @@ p {
 .about-list li {
   font-size: 1.1rem;
   margin: 10px 0;
-  color: #666;
+  color: gold;
 }
 
 /* Education Section Styling */
@@ -193,21 +194,20 @@ p {
 
 #education h2 {
   font-size: 2rem;
-  color: #333;
+  color: gold;
   text-align: center;
   margin-bottom: 20px;
 }
-
 .education-intro {
   font-size: 1.1rem;
-  color: #555;
+  color: gold;
   line-height: 1.6;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .education-item {
-  background-color: goldenrod;
+  background-color: gold;
   padding: 20px;
   margin: 20px 0;
   border-radius: 8px;
@@ -221,9 +221,10 @@ p {
 
 .education-item p {
   font-size: 1rem;
-  color: #555;
+  color: black;
   line-height: 1.6;
 }
+
 
 #skills {
   background-color: black;
@@ -235,7 +236,7 @@ p {
 
 #skills h2 {
   font-size: 2rem;
-  color: goldenrod;
+  color: gold;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -257,7 +258,7 @@ p {
 .skills-category {
   flex: 1;
   min-width: 250px;
-  background-color: goldenrod;
+  background-color: gold;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -286,8 +287,9 @@ p {
 }
 
 /* Contact Form */
+
 .contact-form {
-  background: goldenrod;
+  background: gold;
   padding: 40px;
   border-radius: 10px;
   margin: 0 auto;
@@ -319,6 +321,11 @@ p {
 .contact-form button:hover {
   background-color: #f5a623;
 }
+#achievements{ background-color: gold;}
+
+#projects{ background-color: gold;
+}
+
 
 /* Additional Responsive Styles */
 @media screen and (max-width: 1024px) {
@@ -394,6 +401,8 @@ p {
     /* Education section mobile styles */
     .education-item {
         margin: 15px 0;
+       
+        ;
     }
 
     /* Skills section mobile styles */
@@ -466,7 +475,7 @@ p {
     animation: slideDown 0.3s ease-out forwards;
 }
 .nav-link.active {
-  color: goldenrod !important;
+  color: gold !important;
   position: relative;
 }
 
@@ -477,7 +486,7 @@ p {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: goldenrod;
+  background-color: gold;
   animation: underlineSlide 0.3s ease forwards;
 }
 
