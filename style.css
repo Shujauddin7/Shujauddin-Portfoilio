@@ -111,11 +111,11 @@ p {
   align-items: center;
   height: 90vh;
   color: white;
-  background-color: aqua;
+  background-color: black;
 }
 
 .content {
-  background: rgba(0, 0, 0, 0.7);
+  background:goldenrod;
   padding: 50px;
   border-radius: 10px;
 }
@@ -130,7 +130,7 @@ p {
 #typing-text {
   font-size: 1.5em;
   font-weight: bold;
-  color: goldenrod;
+  color: black;
   width: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -150,7 +150,7 @@ p {
 /* About Section Styling */
 #about {
   padding: 40px;
-  background-color: bisque;
+  background-color: goldenrod;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
@@ -185,7 +185,7 @@ p {
 /* Education Section Styling */
 #education {
   padding: 40px;
-  background-color: aqua;
+  background-color: black;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 40px;
@@ -207,7 +207,7 @@ p {
 }
 
 .education-item {
-  background-color: bisque;
+  background-color: goldenrod;
   padding: 20px;
   margin: 20px 0;
   border-radius: 8px;
@@ -226,7 +226,7 @@ p {
 }
 
 #skills {
-  background-color: aqua;
+  background-color: black;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -235,7 +235,7 @@ p {
 
 #skills h2 {
   font-size: 2rem;
-  color: blue;
+  color: goldenrod;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -257,7 +257,7 @@ p {
 .skills-category {
   flex: 1;
   min-width: 250px;
-  background-color: bisque;
+  background-color: goldenrod;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -287,7 +287,7 @@ p {
 
 /* Contact Form */
 .contact-form {
-  background: rgba(0, 0, 0, 0.7);
+  background: goldenrod;
   padding: 40px;
   border-radius: 10px;
   margin: 0 auto;
@@ -308,7 +308,7 @@ p {
 .contact-form button {
   padding: 12px 20px;
   border: none;
-  background-color: goldenrod;
+  background-color: black;
   color: white;
   font-size: 1.1rem;
   border-radius: 5px;
