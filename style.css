@@ -1,0 +1,509 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: aqua;
+  color: goldenrod;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(70, 24, 196, 0.1);
+  z-index: 1000;
+}
+
+#navbar {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin-right:10px;
+}
+
+nav .brand-name {
+  color: goldenrod;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 3rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin-right: 20px;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive Navbar for Mobile */
+nav .menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: goldenrod;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* Section Styling */
+section {
+  padding: 100px 20px;
+  margin-top: 60px;
+  scroll-margin-top: 80px;
+  background: #fff;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  transform: perspective(1000px) rotateX(20deg);
+  transition: transform 0.6s ease-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+section:hover {
+  transform: perspective(1000px) rotateX(0deg);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: left;
+  font-size: 1.5em;
+}
+
+/* Home Section */
+#home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90vh;
+  color: white;
+  background-color: aqua;
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.image img {
+  width: 30vw;
+  height: 40vw;
+  border-radius: 100px;
+}
+
+/* Typing animation */
+#typing-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: goldenrod;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(30, end) forwards;
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+/* About Section Styling */
+#about {
+  padding: 40px;
+  background-color: bisque;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+#about h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.intro, .conclusion {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.about-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.about-list li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #666;
+}
+
+/* Education Section Styling */
+#education {
+  padding: 40px;
+  background-color: aqua;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+#education h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.education-intro {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.education-item {
+  background-color: bisque;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.education-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+#skills {
+  background-color: aqua;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 40px 0;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  color: blue;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  text-align: center;
+  font-size: 1.2rem;
+  color:black;
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.skills-category {
+  flex: 1;
+  min-width: 250px;
+  background-color: bisque;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skills-category h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.skills-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-category ul li {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.skills-category ul li::before {
+  content: "• ";
+  color: #f5a623;
+}
+
+/* Contact Form */
+.contact-form {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 12px 20px;
+  border: none;
+  background-color: goldenrod;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #f5a623;
+}
+
+/* Additional Responsive Styles */
+@media screen and (max-width: 1024px) {
+    /* Adjust main sections padding */
+    section {
+        padding: 80px 15px;
+    }
+
+    /* Adjust typography for better readability */
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Navbar mobile styles */
+    nav {
+        padding: 10px;
+    }
+
+    nav .brand-name {
+        margin-left: 1rem;
+        font-size: 1.2em;
+    }
+
+    #navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #navbar.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 12px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Home section mobile styles */
+    #home {
+        flex-direction: column;
+        height: auto;
+        padding-top: 80px;
+    }
+
+    .content {
+        width: 90%;
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+
+    .image img {
+        width: 80vw;
+        height: auto;
+        max-width: 300px;
+        margin: 20px 0;
+    }
+
+    /* Education section mobile styles */
+    .education-item {
+        margin: 15px 0;
+    }
+
+    /* Skills section mobile styles */
+    .skills-container {
+        gap: 20px;
+    }
+
+    .skills-category {
+        min-width: 100%;
+    }
+
+    /* Contact form mobile styles */
+    .contact-form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* Show menu icon on mobile */
+    nav .menu-icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    nav .brand-name {
+        font-size: 1.1em;
+    }
+
+    section {
+        padding: 60px 10px;
+        margin-top: 40px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .about-list li {
+        font-size: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+    }
+
+    .contact-form button {
+        padding: 10px 16px;
+    }
+}
+
+/* Fix for navbar toggle animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#navbar.active {
+    animation: slideDown 0.3s ease-out forwards;
+}
+.nav-link.active {
+  color: goldenrod !important;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: goldenrod;
+  animation: underlineSlide 0.3s ease forwards;
+}
+
+@keyframes underlineSlide {
+  from {
+      transform: scaleX(0);
+  }
+  to {
+      transform: scaleX(1);
+  }
+}
+
+/* Intersection Observer Scroll Spy Implementation */
+section {
+  scroll-snap-align: start;
+}
+
+/* Ensure smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+/* Active state styles for mobile */
+@media screen and (max-width: 768px) {
+  .nav-link.active::after {
+      bottom: -2px;
+  }
+}
