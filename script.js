@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Start observing each section for intersection
   sections.forEach(section => observer.observe(section));
 
-  // Manual scroll for navigation links (removes smooth scrolling)
+  // Smooth scroll for navigation links
   navLinks.forEach(link => {
       link.addEventListener('click', function (e) {
           e.preventDefault(); // Prevent default anchor behavior
@@ -33,15 +33,15 @@ document.addEventListener('DOMContentLoaded', function () {
           const targetId = link.getAttribute('href').substring(1); // Remove the '#' from href
           const targetSection = document.getElementById(targetId);
           
-          // Scroll to the target section manually (no smooth scroll)
+          // Scroll to the target section with smooth animation
           window.scrollTo({
               top: targetSection.offsetTop - 50, // Adjust for fixed navbar height
-              behavior: 'auto' // No smooth scroll
+              behavior: 'smooth'
           });
       });
   });
-  
-  // Optionally, you can still listen for manual scroll events to highlight active links:
+
+  // Add event listener for the scroll event to highlight active links
   window.addEventListener('scroll', function () {
       let currentPosition = window.scrollY;
 
@@ -59,17 +59,39 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const form = event.target;
 
-  // Send form data using EmailJS
-  emailjs.sendForm('service_xxxxx', 'template_xxxxx', form, 'user_id')
-      .then(function(response) {
-          document.getElementById('success-message').style.display = 'block';
-          document.getElementById('error-message').style.display = 'none';
-      }, function(error) {
-          document.getElementById('error-message').style.display = 'block';
-          document.getElementById('success-message').style.display = 'none';
-      });
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();  // Prevent the default form submission
+  const emailParams = {
+    from_name: formData.get('from_name'),
+    email_id: formData.get('email_id'),
+    message: formData.get('message')
+};
+
+
+  const formData = new FormData(this);  // Collect the form data
+  
+  // Send the form data using Fetch API (AJAX)
+  fetch('process-form.php', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.json())  // Expect JSON response from the server
+  .then(data => {
+      // Show success message if form is submitted successfully
+      if (data.success) {
+          document.getElementById('form-message').innerText = 'Message sent successfully!';
+          document.getElementById('form-message').style.color = 'green';
+      } else {
+          document.getElementById('form-message').innerText = 'There was an error sending your message. Please try again.';
+          document.getElementById('form-message').style.color = 'red';
+      }
+  })
+  .catch(error => {
+      // Handle errors if AJAX fails
+      document.getElementById('form-message').innerText = 'An error occurred. Please try again later.';
+      document.getElementById('form-message').style.color = 'red';
+  });
 });
+emailjs.init('M36ZVEs87P17_TZLG');
+

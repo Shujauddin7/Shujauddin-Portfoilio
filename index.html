@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <title>Shujauddin's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -262,12 +264,6 @@
     <br>    <br>    <br>    <br><br>    <br>    <br>    <br>
     <br>    <br>    <br>    <br>
    
-        
-        
-           
-        
-   
-
     <!-- Achievements Section -->
     <section id="achievements">
         <h2>Achievements</h2>
@@ -276,72 +272,108 @@
         </p>
     </section>
 
+   
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
+<section id="contact">
+    <h2>Contact</h2>
 
-        <div class="contact-details">
-            <div class="contact-item">
-                <i class="fas fa-phone"></i>
-                <p>Phone number :-</p>
-                <a href="tel:+917892119416"> 7892119416</a>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-envelope"></i>
-               <p>E mail :-</p>
-                <a href="mailto:msshujauddin@gmail.com">msshujauddin@gmail.com</a>
-            </div>
-            <div class="contact-item">
-                <i class="fas fa-linkedin"></i>
-                <p>Linkedin :-</p>
-                <a href="https://www.linkedin.com/in/shujauddin112/" target="_blank">LinkedIn profile</a>
-            </div>
+    <div class="contact-details">
+        <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <p>Phone number:</p>
+            <a href="tel:+917892119416">7892119416</a>
         </div>
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p>Email:</p>
+            <a href="mailto:msshujauddin@gmail.com">msshujauddin@gmail.com</a>
+        </div>
+        <div class="contact-item">
+            <i class="fas fa-linkedin"></i>
+            <p>LinkedIn:</p>
+            <a href="https://www.linkedin.com/in/shujauddin112/" target="_blank">LinkedIn Profile</a>
+        </div>
+    </div>
 
-        <form id="contact-form" class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <form id="contact-form" class="contact-form">
+        <label for="name">Name:</label>
+        <!-- Updated name attribute to match EmailJS template -->
+        <input type="text" id="name" name="from_name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <!-- Updated name attribute to match EmailJS template -->
+        <input type="email" id="email" name="email_id" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
 
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
 
-        <div class="success-message" id="success-message">Your message has been sent successfully!</div>
-        <div class="error-message" id="error-message">There was an error sending your message. Please try again later.</div>
-    </section>
+    <div class="success-message" id="success-message">Your message has been sent successfully!</div>
+    <div class="error-message" id="error-message">There was an error sending your message. Please try again later.</div>
+</section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Shujauddin's Portfolio. All rights reserved.</p>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const navbar = document.getElementById('navbar');
-            navbar.classList.toggle('active');
-        }
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Include EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const form = event.target;
+<script>
+    // Initialize EmailJS with your public key
+    emailjs.init('M36ZVEs87P17_TZLG'); // Replace with your actual public key
 
-            // Send form data using EmailJS
-            emailjs.sendForm('service_xxxxx', 'template_xxxxx', form)
-                .then(function(response) {
-                    document.getElementById('success-message').style.display = 'block';
-                    document.getElementById('error-message').style.display = 'none';
-                }, function(error) {
-                    document.getElementById('error-message').style.display = 'block';
-                    document.getElementById('success-message').style.display = 'none';
-                });
-        });
-    </script>
-    <script>
+    // Toggle Menu function (optional)
+    function toggleMenu() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('active');
+    }
+
+    // Function to hide the success message after 2 seconds
+    function hideSuccessMessage() {
+        setTimeout(() => {
+            document.getElementById('success-message').style.display = 'none';
+        }, 2000);
+    }
+
+    // Submit form and send email via EmailJS
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const form = event.target;
+
+        // Collecting form data
+        const formData = new FormData(form);
+        
+        // Constructing email parameters
+        const emailParams = {
+            from_name: formData.get('from_name'),
+            email_id: formData.get('email_id'),
+            message: formData.get('message')
+        };
+
+        // Log the form data for debugging
+        console.log(emailParams);
+
+        // Send form data using EmailJS
+        emailjs.sendForm('service_uhf271q', 'template_4gry44c', form)
+            .then(function(response) {
+                console.log('Email sent successfully:', response);
+                document.getElementById('success-message').style.display = 'block';
+                document.getElementById('error-message').style.display = 'none';
+                hideSuccessMessage(); // Hide success message after 2 seconds
+            }, function(error) {
+                console.log('Failed to send email:', error);
+                document.getElementById('error-message').style.display = 'block';
+                document.getElementById('success-message').style.display = 'none';
+            });
+    });
+</script>
+
+ <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
