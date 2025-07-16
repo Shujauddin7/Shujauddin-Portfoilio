@@ -108,8 +108,8 @@ section {
   margin-top: -60px;  /* Add this to offset the padding */
   padding-top: 80px;  /* Adjust based on navbar height */
   scroll-margin-top: 60px;
-  background: #fff;
-  color: black;
+  background: black;
+  color: gold;
   border-radius: 10px;
   margin-bottom: 50px;
   transform: perspective(1000px) rotateX(20deg);
@@ -145,9 +145,10 @@ p {
 }
 
 .content {
-  background: gold;
+  background: black;
   padding: 50px;
   border-radius: 10px;
+  border: 1px solid gold;
 }
 
 .image img {
@@ -160,7 +161,7 @@ p {
 #typing-text {
   font-size: 1.2em;
   font-weight: bold;
-  color: black;
+  color: gold;
   width: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -237,21 +238,22 @@ p {
 }
 
 .education-item {
-  background-color: gold;
+  background-color: black;
   padding: 20px;
   margin: 20px 0;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid gold;
 }
 
 .education-item h3 {
   font-size: 1.5rem;
-  color: #333;
+  color: gold;
 }
 
 .education-item p {
   font-size: 1rem;
-  color: black;
+  color: gold;
   line-height: 1.6;
 }
 
@@ -274,7 +276,7 @@ p {
 .section-description {
   text-align: center;
   font-size: 1.2rem;
-  color: black;
+  color: gold;
   margin-bottom: 30px;
 }
 
@@ -288,15 +290,16 @@ p {
 .skills-category {
   flex: 1;
   min-width: 250px;
-  background-color: gold;
+  background-color: black;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid gold;
 }
 
 .skills-category h3 {
   font-size: 1.4rem;
-  color: #333;
+  color: gold;
   margin-bottom: 10px;
 }
 
@@ -307,7 +310,7 @@ p {
 
 .skills-category ul li {
   font-size: 1.2rem;
-  color: black;
+  color: gold;
   margin-bottom: 10px;
 }
 
@@ -322,12 +325,13 @@ p {
 }
 /* Contact Form */
 .contact-form {
-  background: gold;
+  background: black;
   padding: 40px;
   border-radius: 10px;
   margin: 0 auto;
   max-width: 500px;
   text-align: center;
+  border: 1px solid gold;
 }
 p{color:black}
 
@@ -357,16 +361,16 @@ p{color:black}
 }
 
 #achievements {
-  background-color: gold;
+  background-color: black;
 }
 #projects p {
-  color: black;
+  color: gold;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 #projects {
-  background-color: gold;
+  background-color: black;
   
 }
 
