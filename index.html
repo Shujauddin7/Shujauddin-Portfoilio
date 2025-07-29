@@ -1,400 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <title>Shujauddin's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        
-        
-        /* Contact Details Styling */
-        #contact{ background-color: black;}
-      
-        .contact-details {
-            max-width: 500px;
-            margin: 2rem auto;
-            padding: 1rem;
-            background-color: gold;
-        }
-        
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts for better typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Enhanced 3D Particle System -->
+    <div class="floating-particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+    <div class="particles" id="particles"></div>
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            gap: 1rem;
-           
-        }
-
-        .contact-item i {
-            font-size: 1.5rem;
-            color: #4CAF50;
-        }
-
-        .contact-item a {
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: #4CAF50;
-        }
-
-        /* Your existing form styles */
-        .contact-form {
-            max-width: 500px;
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background-color: gold;
-        }
-
-        .contact-form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .contact-form textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .submit-btn {
-            background-color: #4CAF50;
-            color: gold;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            width: 100%;
-            transition: background-color 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #45a049;
-        }
-
-        .success-message {
-            color: #4CAF50;
-            text-align: center;
-            margin-top: 1rem;
-            display: none;
-        }
-
-        .error-message {
-            color: #f44336;
-            text-align: center;
-            margin-top: 1rem;
-            display: none;
-        }
-
-        /* Basic page styling */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h2 {
-            text-align: center;
-            color: black;
-        }
-    </style>
-</head>
-<body>
     <nav>
-        <div class="brand-name">Portfolio</div>
-        <span class="menu-icon" onclick="toggleMenu()">☰</span>
-        <ul id="navbar">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#education" class="nav-link">Education</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#achievements" class="nav-link">Achievements</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+      <div class="brand-name">Portfolio</div>
+      <span class="menu-icon" onclick="toggleMenu()">☰</span>
+      <ul id="navbar">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
     </nav>
 
     <!-- Home Section -->
     <section id="home">
+      <div class="hero-container">
         <div class="content">
-            <h1>Welcome to My Portfolio</h1>
-            <hr><br><br>
-            <p>Hello!</p>
-            <p>I'm Shujauddin</p>
-            <br>
-            <p id="typing-text">And I<br>Hope you are doing well</p>
+          <h1 class="glitch-text">Welcome to My Portfolio</h1>
+          <div class="hero-divider"></div>
+          <p class="hero-greeting">Hello!</p>
+          <p class="hero-name">I'm Shujauddin</p>
+          <p id="typing-text" class="hero-subtitle">
+            "Just a glimpse, not the full picture."
+          </p>
+          <div class="floating-elements">
+            <div class="floating-orb orb-1"></div>
+            <div class="floating-orb orb-2"></div>
+            <div class="floating-orb orb-3"></div>
+          </div>
         </div>
-        <iframe src="https://my.spline.design/genkubgreetingrobot-zDnc40hqiO7jhhYpiWPTAYxv/" frameborder="0" width="100%" height="500px"></iframe>
+        <div class="spline-container">
+          <iframe
+            src="https://my.spline.design/untitled-7c8a8a8a8a8a8a8a/"
+            frameborder="0"
+            width="100%"
+            height="100%"
+            class="spline-frame"
+            loading="eager"
+            title="3D Robot Animation"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
         </div>
+      </div>
     </section>
-    <br> <br> 
+    <br />
+    <br />
 
     <!-- About Section -->
     <section id="about">
-        <h2>About Me</h2>
-        <p class="intro">
-            I'm a Curious, Adventurous and Explorer passionate about discovering new opportunities and learning across different fields.
-        </p>
-        <ul class="about-list"><br>
-            <li> Strong problem-solving abilities with a knack for finding creative solutions</li>
-            <li> Excellent communication skills, both written and verbal</li>
-            <li> Patient and empathetic approach to handling complex situations</li>
-            <li> Ability to maintain composure in fast-paced environments</li>
-            <li> Dedicated team player with a positive attitude</li>
-            <li> Enthusiastic about learning and adapting to new challenges</li>
-            <li> Committed to delivering exceptional customer experiences</li>
-        </ul>
-        <br>
-        <p class="conclusion">
-            Currently, I'm focusing on expanding my horizons and developing skills that will help me make meaningful contributions in whatever field I choose to pursue.
-        </p>
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <div class="spline-bg-container">
+          <iframe
+            src="https://my.spline.design/untitled-c9b8b8b8b8b8b8b8/"
+            frameborder="0"
+            width="100%"
+            height="300px"
+            class="background-spline"
+          ></iframe>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="intro-card">
+          <p class="intro">
+            I'm a Curious, Adventurous and Explorer passionate about discovering
+            new opportunities and learning across different fields.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            Strong problem-solving abilities with a knack for finding creative
+            solutions
+          </div>
+          <div class="skill-card">
+            Excellent communication skills, both written and verbal
+          </div>
+          <div class="skill-card">
+            Patient and empathetic approach to handling complex situations
+          </div>
+          <div class="skill-card">
+            Ability to maintain composure in fast-paced environments
+          </div>
+          <div class="skill-card">
+            Dedicated team player with a positive attitude
+          </div>
+          <div class="skill-card">
+            Enthusiastic about learning and adapting to new challenges
+          </div>
+          <div class="skill-card">
+            Committed to delivering exceptional customer experiences
+          </div>
+        </div>
+        <div class="conclusion-card">
+          <p class="conclusion">
+            Currently, I'm focusing on expanding my horizons and developing
+            skills that will help me make meaningful contributions in whatever
+            field I choose to pursue.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Education Section -->
     <section id="education">
-        <h2>Education</h2>
-        <p class="education-intro">
-            Below are my academic qualifications:
-        </p>
+      <h2>Education</h2>
+      <p class="education-intro">Below are my academic qualifications:</p>
 
-        <div class="education-item">
-            <h3>School</h3>
-            <p><strong>Holy Cresent English high school</strong></p>
-            <p><strong>Year:</strong> 2018</p>
-            <p><strong>Marks Scored in SSLC:</strong> 69%</p>
-        </div>
+      <div class="education-item">
+        <h3>School</h3>
+        <p><strong>Holy Cresent English high school</strong></p>
+        <p><strong>Year:</strong> 2018</p>
+        <p><strong>Marks Scored in SSLC:</strong> 69%</p>
+      </div>
 
-        <div class="education-item">
-            <h3>Pre-University Course (PUC)</h3>
-            <p><strong>SSMRV PU College</strong></p>
-            <p><strong>Year:</strong> 2021</p>
-            <p><strong>Marks Scored in 2 PUC:</strong> 70%</p>
-        </div>
+      <div class="education-item">
+        <h3>Pre-University Course (PUC)</h3>
+        <p><strong>SSMRV PU College</strong></p>
+        <p><strong>Year:</strong> 2021</p>
+        <p><strong>Marks Scored in 2 PUC:</strong> 70%</p>
+      </div>
 
-        <div class="education-item">
-            <h3>Degree <br>Bachelor of Commerce (BCom)</h3>
-            <p><strong>Ameen Arts, Science and Commerce College</strong></p>
-            <p><strong>Year:</strong> 2024</p>
-            <p><strong>CGPA:</strong> 78%</p>
-        </div>
+      <div class="education-item">
+        <h3>Degree <br />Bachelor of Commerce (BCom)</h3>
+        <p><strong>Ameen Arts, Science and Commerce College</strong></p>
+        <p><strong>Year:</strong> 2024</p>
+        <p><strong>CGPA:</strong> 78%</p>
+      </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills</h2>
-        <p class="section-description">
-            Below are some of my core Technical Skills and Soft Skills that help me excel in various roles.
-        </p>
+      <h2>Skills</h2>
+      <p class="section-description">
+        Below are some of my core Technical Skills and Soft Skills that help me
+        excel in various roles.
+      </p>
 
-        <div class="skills-container">
-            <!-- Technical Skills -->
-            <div class="skills-category">
-                <h3>Technical Skills</h3>
-                <ul>
-                    <li><strong>Microsoft Office & Google Workspace:</strong></li>
-                    <li> Word, Google Docs (document creation and formatting)</li>
-                    <li> Excel, Google Sheets (data organization, basic formulas)</li>
-                    <li> PowerPoint, Google Slides (presentation design)</li>
-                    <li> Basic HTML and CSS knowledge</li>
-                    <li> Data entry and documentation</li>
-                </ul>
-            </div>
-
-            <!-- Soft Skills -->
-            <div class="skills-category">
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li> Time management</li>
-                    <li> Multitasking</li>
-                    <li> Adaptability</li>
-                    <li> Team collaboration</li>
-                    <li> Decision making</li>
-                    <li> Conflict resolution</li>
-                    <li> Customer service</li>
-                    <li> Problem-solving</li>
-                    <li> Active listening</li>
-                    <li> Communication</li>
-                    <li> Attention to detail</li>
-                    <li> Empathy</li>
-                    <li> Leadership</li>
-                    <li> Critical thinking</li>
-                    <li> Emotional intelligence</li>
-                    <li> Sports & Team Activities: Karate, Cricket, Basketball, Snooker (Demonstrating discipline, teamwork, leadership, focus, and resilience)</li>
-                </ul>
-            </div>
-            <br><br>
-            <p>
-                These skills empower me to contribute effectively in various roles and enhance customer experiences.
-            </p>
+      <div class="skills-container">
+        <!-- Technical Skills -->
+        <div class="skills-category">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li><strong>Microsoft Office & Google Workspace:</strong></li>
+            <li>Word, Google Docs (document creation and formatting)</li>
+            <li>Excel, Google Sheets (data organization, basic formulas)</li>
+            <li>PowerPoint, Google Slides (presentation design)</li>
+            <li>Basic HTML and CSS knowledge</li>
+            <li>Data entry and documentation</li>
+          </ul>
         </div>
+
+        <!-- Soft Skills -->
+        <div class="skills-category">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Time management</li>
+            <li>Multitasking</li>
+            <li>Adaptability</li>
+            <li>Team collaboration</li>
+            <li>Decision making</li>
+            <li>Conflict resolution</li>
+            <li>Customer service</li>
+            <li>Problem-solving</li>
+            <li>Active listening</li>
+            <li>Communication</li>
+            <li>Attention to detail</li>
+            <li>Empathy</li>
+            <li>Leadership</li>
+            <li>Critical thinking</li>
+            <li>Emotional intelligence</li>
+            <li>
+              Sports & Team Activities: Karate, Cricket, Basketball, Snooker
+              (Demonstrating discipline, teamwork, leadership, focus, and
+              resilience)
+            </li>
+          </ul>
+        </div>
+        <br /><br />
+        <p>
+          These skills empower me to contribute effectively in various roles and
+          enhance customer experiences.
+        </p>
+      </div>
     </section>
-    <br>
-    <br><br><br><br><br><br><br><br>
+    <br />
+    <br /><br /><br /><br /><br /><br /><br /><br />
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
-        <p class="section-description">
-            Here are some projects that I have worked on or contributed to.
-        </p>
-        <p>This is my personal portfolio built using HTML, CSS, and JavaScript. It showcases my skills, education, achievements, and contact information.</p>
-        <br>
-        <p> </p>
-        <iframe src="https://findmyipaddressnow.com/" style="width: 100%; height: 100vh; border: none;"></iframe>
+      <div class="projects-header">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-spline">
+          <iframe
+            src="https://my.spline.design/macbookprocopy-2e8b8b8b8b8b8b8b/"
+            frameborder="0"
+            width="100%"
+            height="400px"
+            class="project-spline"
+          ></iframe>
+        </div>
+      </div>
+      <div class="projects-content">
+        <div class="project-card">
+          <h3>Personal Portfolio</h3>
+          <p class="project-description">
+            This is my personal portfolio built using HTML, CSS, and JavaScript.
+            It showcases my skills, education, achievements, and contact
+            information with stunning 3D elements.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Spline 3D</span>
+          </div>
+        </div>
+        <div class="project-showcase">
+          <iframe
+            src="https://findmyipaddressnow.com/"
+            class="project-iframe"
+          ></iframe>
+        </div>
+      </div>
     </section>
-    <br>    
-   
+    <br />
+
     <!-- Achievements Section -->
     <section id="achievements">
-        <h2>Achievements</h2>
-        <p class="section-description">
-            More achievements will be listed here soon.
-        </p>
+      <h2>Achievements</h2>
+      <p class="section-description">
+        More achievements will be listed here soon.
+      </p>
     </section>
 
-   
     <!-- Contact Section -->
-<section id="contact">
-    <h2>Contact</h2>
-
-    <div class="contact-details">
-        <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <p>Phone number:</p>
-            <a href="tel:+917892119416">7892119416</a>
+    <section id="contact">
+      <div class="contact-header">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-spline">
+          <iframe
+            src="https://my.spline.design/untitled-d9c8b8b8b8b8b8b8/"
+            frameborder="0"
+            width="100%"
+            height="300px"
+            class="contact-bg-spline"
+          ></iframe>
         </div>
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <p>Email:</p>
-            <a href="mailto:msshujauddin@gmail.com">msshujauddin@gmail.com</a>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">📱</div>
+              <div class="contact-text">
+                <p>Phone number:</p>
+                <a href="tel:+917892119416">7892119416</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-text">
+                <p>Email:</p>
+                <a href="mailto:msshujauddin@gmail.com"
+                  >msshujauddin@gmail.com</a
+                >
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">💼</div>
+              <div class="contact-text">
+                <p>LinkedIn:</p>
+                <a
+                  href="https://www.linkedin.com/in/shujauddin112/"
+                  target="_blank"
+                  >LinkedIn Profile</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="contact-item">
-            <i class="fas fa-linkedin"></i>
-            <p>LinkedIn:</p>
-            <a href="https://www.linkedin.com/in/shujauddin112/" target="_blank">LinkedIn Profile</a>
+
+        <div class="contact-form-container">
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="from_name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email_id" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+              <div class="btn-glow"></div>
+            </button>
+          </form>
+
+          <div class="success-message" id="success-message"></div>
+          <div class="error-message" id="error-message"></div>
         </div>
-    </div>
-
-    <form id="contact-form" class="contact-form">
-        <label for="name">Name:</label>
-        <!-- Updated name attribute to match EmailJS template -->
-        <input type="text" id="name" name="from_name" required>
-
-        <label for="email">Email:</label>
-        <!-- Updated name attribute to match EmailJS template -->
-        <input type="email" id="email" name="email_id" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-
-    <div class="success-message" id="success-message">Your message has been sent successfully!</div>
-    <div class="error-message" id="error-message">There was an error sending your message. Please try again later.</div>
-</section>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Shujauddin's Portfolio. All rights reserved.</p>
+      <p>&copy; 2024 Shujauddin's Portfolio. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Include EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
 
-<script>
-    // Initialize EmailJS with your public key
-    emailjs.init('M36ZVEs87P17_TZLG'); // Replace with your actual public key
+    <script>
+      // Initialize EmailJS with your public key
+      emailjs.init("M36ZVEs87P17_TZLG"); // Replace with your actual public key
 
-    // Toggle Menu function (optional)
-    function toggleMenu() {
-        const navbar = document.getElementById('navbar');
-        navbar.classList.toggle('active');
-    }
+      // Toggle Menu function (optional)
+      function toggleMenu() {
+        const navbar = document.getElementById("navbar");
+        navbar.classList.toggle("active");
+      }
 
-    // Function to hide the success message after 2 seconds
-    function hideSuccessMessage() {
+      // Function to hide the success message after 2 seconds
+      function hideSuccessMessage() {
         setTimeout(() => {
-            document.getElementById('success-message').style.display = 'none';
+          document.getElementById("success-message").style.display = "none";
         }, 2000);
-    }
+      }
 
-    // Submit form and send email via EmailJS
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const form = event.target;
+      // Submit form and send email via EmailJS
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const form = event.target;
 
-        // Collecting form data
-        const formData = new FormData(form);
-        
-        // Constructing email parameters
-        const emailParams = {
-            from_name: formData.get('from_name'),
-            email_id: formData.get('email_id'),
-            message: formData.get('message')
-        };
+          // Collecting form data
+          const formData = new FormData(form);
 
-        // Log the form data for debugging
-        console.log(emailParams);
+          // Constructing email parameters
+          const emailParams = {
+            from_name: formData.get("from_name"),
+            email_id: formData.get("email_id"),
+            message: formData.get("message"),
+          };
 
-        // Send form data using EmailJS
-        emailjs.sendForm('service_uhf271q', 'template_4gry44c', form)
-            .then(function(response) {
-                console.log('Email sent successfully:', response);
-                document.getElementById('success-message').style.display = 'block';
-                document.getElementById('error-message').style.display = 'none';
-                hideSuccessMessage(); // Hide success message after 2 seconds
-            }, function(error) {
-                console.log('Failed to send email:', error);
-                document.getElementById('error-message').style.display = 'block';
-                document.getElementById('success-message').style.display = 'none';
-            });
-    });
-</script>
+          // Log the form data for debugging
+          console.log(emailParams);
 
- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-        
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => {
-                            link.classList.remove('active');
-                            if (link.getAttribute('href').slice(1) === entry.target.id) {
-                                link.classList.add('active');
-                            }
-                        });
-                    }
-                });
-            }, { threshold: 0.5 });
-        
-            sections.forEach(section => observer.observe(section));
+          // Send form data using EmailJS
+          emailjs.sendForm("service_uhf271q", "template_4gry44c", form).then(
+            function (response) {
+              console.log("Email sent successfully:", response);
+              document.getElementById("success-message").style.display =
+                "block";
+              document.getElementById("error-message").style.display = "none";
+              hideSuccessMessage(); // Hide success message after 2 seconds
+            },
+            function (error) {
+              console.log("Failed to send email:", error);
+              document.getElementById("error-message").style.display = "block";
+              document.getElementById("success-message").style.display = "none";
+            }
+          );
         });
-        </script>
-        <P>Thank you have a good day</P>
-</body>
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Enhanced Navigation and Scroll Effects
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        // Smooth scroll with offset for fixed navbar
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            const offsetTop = targetSection.offsetTop - 100;
+
+            window.scrollTo({
+              top: offsetTop,
+              behavior: "smooth",
+            });
+          });
+        });
+
+        // Enhanced Intersection Observer for active nav links
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                navLinks.forEach((link) => {
+                  link.classList.remove("active");
+                  if (link.getAttribute("href").slice(1) === entry.target.id) {
+                    link.classList.add("active");
+                  }
+                });
+              }
+            });
+          },
+          {
+            threshold: 0.3,
+            rootMargin: "-100px 0px -100px 0px",
+          }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        // Enhanced 3D Interactive Effects
+        let mouseX = 0,
+          mouseY = 0;
+
+        document.addEventListener("mousemove", (e) => {
+          mouseX = e.clientX / window.innerWidth - 0.5;
+          mouseY = e.clientY / window.innerHeight - 0.5;
+
+          // Update floating orbs based on mouse position
+          const orbs = document.querySelectorAll(".floating-orb");
+          orbs.forEach((orb, index) => {
+            const speed = (index + 1) * 0.05;
+            const x = mouseX * speed * 50;
+            const y = mouseY * speed * 50;
+
+            orb.style.transform = `translate(${x}px, ${y}px) rotate(${
+              x * 2
+            }deg)`;
+          });
+
+          // Parallax effect for sections
+          const parallaxElements = document.querySelectorAll(
+            ".spline-container, .spline-bg-container"
+          );
+          parallaxElements.forEach((element, index) => {
+            const speed = (index + 1) * 0.02;
+            const x = mouseX * speed * 20;
+            const y = mouseY * speed * 20;
+
+            element.style.transform = `translate(${x}px, ${y}px)`;
+          });
+        });
+
+        // Create dynamic particles
+        function createDynamicParticles() {
+          const particleContainer = document.getElementById("particles");
+          if (!particleContainer) return;
+
+          for (let i = 0; i < 20; i++) {
+            const particle = document.createElement("div");
+            particle.className = "dynamic-particle";
+            particle.style.cssText = `
+              position: absolute;
+              width: ${Math.random() * 6 + 2}px;
+              height: ${Math.random() * 6 + 2}px;
+              background: radial-gradient(circle, rgba(120, 219, 255, 0.8), rgba(255, 119, 198, 0.4));
+              border-radius: 50%;
+              left: ${Math.random() * 100}%;
+              top: ${Math.random() * 100}%;
+              animation: floatDynamic ${
+                Math.random() * 15 + 10
+              }s infinite ease-in-out;
+              animation-delay: ${Math.random() * 5}s;
+              pointer-events: none;
+              filter: blur(${Math.random() * 1}px);
+              box-shadow: 0 0 ${
+                Math.random() * 20 + 10
+              }px rgba(120, 219, 255, 0.3);
+            `;
+            particleContainer.appendChild(particle);
+          }
+        }
+
+        // Add dynamic particle animation
+        const style = document.createElement("style");
+        style.textContent = `
+          @keyframes floatDynamic {
+            0%, 100% { 
+              transform: translate3d(0, 0, 0) rotate(0deg) scale(1); 
+              opacity: 0.6;
+            }
+            25% { 
+              transform: translate3d(30px, -40px, 10px) rotate(90deg) scale(1.2); 
+              opacity: 1;
+            }
+            50% { 
+              transform: translate3d(-20px, -80px, -5px) rotate(180deg) scale(0.8); 
+              opacity: 0.8;
+            }
+            75% { 
+              transform: translate3d(-35px, -40px, 15px) rotate(270deg) scale(1.1); 
+              opacity: 1;
+            }
+          }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize dynamic particles
+        createDynamicParticles();
+
+        // Enhanced scroll animations for sections
+        const scrollObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.transform =
+                  "perspective(1200px) rotateX(0deg) translateY(0px)";
+                entry.target.style.opacity = "1";
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        sections.forEach((section) => {
+          if (section.id !== "home") {
+            section.style.transform =
+              "perspective(1200px) rotateX(8deg) translateY(20px)";
+            section.style.opacity = "0.8";
+            section.style.transition =
+              "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+            scrollObserver.observe(section);
+          }
+        });
+
+        // Performance optimization
+        let ticking = false;
+        function updateAnimations() {
+          // Throttle animations for better performance
+          if (!ticking) {
+            requestAnimationFrame(() => {
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }
+
+        // Add loading animation for Spline iframes
+        const splineFrames = document.querySelectorAll('iframe[src*="spline"]');
+        splineFrames.forEach((frame) => {
+          frame.addEventListener("load", () => {
+            frame.style.opacity = "1";
+            frame.style.transform = "scale(1)";
+          });
+
+          // Initial state
+          frame.style.opacity = "0";
+          frame.style.transform = "scale(0.95)";
+          frame.style.transition = "all 0.6s ease";
+        });
+      });
+    </script>
+    <p>Thank you have a good day</p>
+  </body>
 </html>
